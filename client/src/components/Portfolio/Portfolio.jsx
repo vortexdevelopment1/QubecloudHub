@@ -589,19 +589,6 @@ const Portfolio = () => {
               A selection of our recent video and content projects (Instagram Reels / Verticals):
             </p>
           </div>
-
-          {/* Header CTA (shown when projects exist) */}
-          {projectsList.length > 0 && (
-            <div className="flex items-center gap-3 self-start sm:self-auto">
-              <a
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-purple-500/30 text-xs font-semibold text-gray-300 hover:text-white hover:border-purple-400 transition-colors"
-                href="#contact"
-              >
-                <span>View All</span>
-                <span className="material-symbols-outlined text-[13px] sm:text-[14px]">arrow_forward</span>
-              </a>
-            </div>
-          )}
         </div>
 
         {/* Swiper.js Infinite Autoplay Carousel or Empty/Loading State */}
