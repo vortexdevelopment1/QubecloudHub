@@ -1,7 +1,7 @@
 export const stats = [
   {
     id: 1,
-    value: "15+",
+    value: "35+",
     label: "Projects Completed",
     isWideOnMobile: false
   },
