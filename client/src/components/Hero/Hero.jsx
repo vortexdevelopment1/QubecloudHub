@@ -55,11 +55,11 @@ const Hero = () => {
   const clientLogos = ["APEX", "VELOCE", "HYPERION", "SOLARIX", "QUANTICO", "SYNTHETIX"];
 
   return (
-    <section className="relative pt-4 sm:pt-10 md:pt-12 pb-10 sm:pb-14 md:pb-16 overflow-hidden">
+    <section className="relative pt-2 sm:pt-10 md:pt-12 pb-3 sm:pb-14 md:pb-16 overflow-hidden">
       <div className="max-w-[1480px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center min-h-[65vh] sm:min-h-[70vh]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-8 lg:gap-8 items-center min-h-0 sm:min-h-[70vh]">
           {/* Left Column: Typography & CTAs with Staggered Entrance */}
-          <div className="lg:col-span-6 flex flex-col items-start gap-4 sm:gap-6">
+          <div className="lg:col-span-6 flex flex-col items-start gap-3.5 sm:gap-6">
             {/* Eyebrow Pill */}
             <div className="animate-hero-eyebrow inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-1.5 rounded-full bg-purple-950/40 border border-purple-500/30">
               <span className="text-[9px] sm:text-[10px] font-bold tracking-wider sm:tracking-[0.2em] uppercase text-purple-300">
@@ -96,7 +96,7 @@ const Hero = () => {
             </div>
 
             {/* Trust Badge Cluster */}
-            <div className="animate-hero-trust pt-2 sm:pt-4 flex items-center gap-3 sm:gap-4">
+            <div className="animate-hero-trust pt-1 sm:pt-4 flex items-center gap-3 sm:gap-4">
               {/* Avatar Cluster */}
               <div className="flex -space-x-2 sm:-space-x-2.5 overflow-hidden flex-shrink-0">
                 {clientAvatars.map((avatar, idx) => (
@@ -119,12 +119,12 @@ const Hero = () => {
           </div>
 
           {/* Right Column: Glowing 3D Pedestal with Surrounding Badges — EXACT ORIGINAL */}
-          <div className="lg:col-span-6 relative flex items-center justify-center py-4 lg:py-0">
+          <div className="lg:col-span-6 relative flex items-center justify-center py-2 sm:py-4 lg:py-0">
             {/* Center Radial Purple Aura */}
-            <div className="absolute w-[300px] h-[300px] sm:w-[420px] sm:h-[420px] bg-purple-600/30 rounded-full blur-[80px] sm:blur-[100px] pointer-events-none"></div>
-            <div className="relative w-full max-w-[340px] sm:max-w-[480px] aspect-square flex items-center justify-center scale-90 sm:scale-100">
+            <div className="absolute w-[240px] h-[240px] sm:w-[420px] sm:h-[420px] bg-purple-600/30 rounded-full blur-[60px] sm:blur-[100px] pointer-events-none"></div>
+            <div className="relative w-full max-w-[280px] sm:max-w-[480px] aspect-square flex items-center justify-center scale-90 sm:scale-100">
               {/* 3D Centerpiece Visual */}
-              <div className="relative z-10 w-[260px] h-[260px] sm:w-[340px] sm:h-[340px] rounded-full overflow-hidden flex items-center justify-center">
+              <div className="relative z-10 w-[210px] h-[210px] sm:w-[340px] sm:h-[340px] rounded-full overflow-hidden flex items-center justify-center">
                 <img
                   alt="QubecloudHub 3D Holographic Core"
                   className="w-full h-full object-contain filter drop-shadow-[0_0_35px_rgba(168,85,247,0.7)]"
@@ -155,11 +155,11 @@ const Hero = () => {
         </div>
 
         {/* CLIENT LOGOS TICKER / TRUST BAR */}
-        <div className="animate-hero-trust mt-8 sm:mt-12 pt-5 sm:pt-8 border-t border-purple-500/15">
-          <p className="text-center text-[9px] sm:text-[10px] font-bold tracking-[0.2em] sm:tracking-[0.25em] text-gray-400 uppercase mb-4 sm:mb-5">
+        <div className="animate-hero-trust mt-4 sm:mt-12 pt-3 sm:pt-8 border-t border-purple-500/15">
+          <p className="text-center text-[9px] sm:text-[10px] font-bold tracking-[0.2em] sm:tracking-[0.25em] text-gray-400 uppercase mb-2.5 sm:mb-5">
             TRUSTED BY BUSINESSES ACROSS INDUSTRIES
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-14 md:gap-20 opacity-70">
+          <div className="flex flex-wrap items-center justify-center gap-5 sm:gap-14 md:gap-20 opacity-70">
             {clientLogos.map((logo, index) => (
               <span
                 key={index}

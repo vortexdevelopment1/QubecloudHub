@@ -6,7 +6,7 @@ const Founder = () => {
   const [sectionRef, isVisible] = useScrollReveal();
 
   return (
-    <section className="py-6 sm:py-10 md:py-12 relative" id="founder">
+    <section className="py-4 sm:py-10 md:py-12 relative" id="founder">
       <div className="max-w-[1480px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 w-full">
         <div
           ref={sectionRef}

@@ -568,7 +568,7 @@ const Portfolio = () => {
 
   return (
     <section
-      className="py-6 sm:py-10 md:py-12 relative overflow-hidden"
+      className="py-4 sm:py-10 md:py-12 relative overflow-hidden"
       id="portfolio"
     >
       <div
@@ -576,7 +576,7 @@ const Portfolio = () => {
         className={`reveal-section ${isVisible ? 'is-revealed' : ''} max-w-[1480px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 w-full`}
       >
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-5 sm:mb-8">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-4 sm:mb-8">
           <div className="flex flex-col gap-1">
             <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-purple-400">
               <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span>
@@ -590,30 +590,11 @@ const Portfolio = () => {
             </p>
           </div>
 
-          {/* Header Controls: Prev/Next Buttons & CTA (shown when projects exist) */}
+          {/* Header CTA (shown when projects exist) */}
           {projectsList.length > 0 && (
             <div className="flex items-center gap-3 self-start sm:self-auto">
-              <div className="flex items-center gap-1 bg-[#110e1c] p-1 rounded-full border border-purple-500/25 shadow-inner">
-                <button
-                  type="button"
-                  onClick={() => swiperRef.current?.slidePrev()}
-                  className="w-7 h-7 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-purple-900/40 transition-colors cursor-pointer"
-                  aria-label="Previous Project"
-                >
-                  <span className="material-symbols-outlined text-[16px]">chevron_left</span>
-                </button>
-                <button
-                  type="button"
-                  onClick={() => swiperRef.current?.slideNext()}
-                  className="w-7 h-7 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-purple-900/40 transition-colors cursor-pointer"
-                  aria-label="Next Project"
-                >
-                  <span className="material-symbols-outlined text-[16px]">chevron_right</span>
-                </button>
-              </div>
-
               <a
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-purple-500/30 text-xs font-semibold text-gray-300 hover:text-white hover:border-purple-400 transition-colors"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-purple-500/30 text-xs font-semibold text-gray-300 hover:text-white hover:border-purple-400 transition-colors"
                 href="#contact"
               >
                 <span>View All</span>

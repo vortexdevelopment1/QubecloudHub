@@ -30,7 +30,7 @@ const Home = () => {
       <Navbar />
 
       {/* Main Content */}
-      <main className="relative z-10 w-full pt-20" id="home">
+      <main className="relative z-10 w-full pt-16 sm:pt-20" id="home">
         <Hero />
         <Founder />
         <About />
