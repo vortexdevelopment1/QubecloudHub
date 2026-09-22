@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaWhatsapp, FaInstagram, FaEnvelope, FaPhone } from 'react-icons/fa6';
 import useScrollReveal from '../../hooks/useScrollReveal';
 import contactService from '../../services/contactService';
 
@@ -68,10 +69,30 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { label: 'WA', href: 'https://wa.me/919977978575' },
-    { label: 'IG', href: 'https://instagram.com/promo.hub' },
-    { label: 'Mail', href: 'mailto:QubecloudHub@gmail.com' },
-    { label: 'Call', href: 'tel:+919977978575' },
+    {
+      label: 'WhatsApp',
+      icon: <FaWhatsapp className="text-[17px] text-[#25D366] group-hover:scale-110 transition-transform" />,
+      href: 'https://wa.me/919977978575',
+      hoverStyle: 'hover:border-emerald-500/60 hover:shadow-[0_0_15px_rgba(37,211,102,0.35)]',
+    },
+    {
+      label: 'Instagram',
+      icon: <FaInstagram className="text-[17px] text-[#E1306C] group-hover:scale-110 transition-transform" />,
+      href: 'https://instagram.com/qubecloudhub',
+      hoverStyle: 'hover:border-fuchsia-500/60 hover:shadow-[0_0_15px_rgba(225,48,108,0.35)]',
+    },
+    {
+      label: 'Email',
+      icon: <FaEnvelope className="text-[15px] text-purple-400 group-hover:scale-110 transition-transform" />,
+      href: 'mailto:QubecloudHub@gmail.com',
+      hoverStyle: 'hover:border-purple-500/60 hover:shadow-[0_0_15px_rgba(168,85,247,0.35)]',
+    },
+    {
+      label: 'Phone',
+      icon: <FaPhone className="text-[14px] text-indigo-400 group-hover:scale-110 transition-transform" />,
+      href: 'tel:+919977978575',
+      hoverStyle: 'hover:border-indigo-500/60 hover:shadow-[0_0_15px_rgba(99,102,241,0.35)]',
+    },
   ];
 
   return (
@@ -128,17 +149,18 @@ const Contact = () => {
               </div>
 
               {/* Social Links */}
-              <div className="flex items-center gap-2.5 pt-1 sm:pt-2">
+              <div className="flex items-center gap-3 pt-1 sm:pt-2">
                 {socialLinks.map((item, idx) => (
                   <a
                     key={idx}
-                    className="w-8 h-8 rounded-full bg-[#08060c] border border-purple-500/20 text-gray-300 hover:text-white hover:border-purple-400 hover:scale-110 flex items-center justify-center text-xs transition-all duration-300"
+                    className={`group w-9 h-9 rounded-full bg-[#08060c] border border-purple-500/20 text-gray-300 hover:text-white ${item.hoverStyle} hover:scale-110 flex items-center justify-center transition-all duration-300 shadow-sm cursor-pointer`}
                     href={item.href}
                     target="_blank"
                     rel="noreferrer"
-                    aria-label={`Follow on ${item.label}`}
+                    title={item.label}
+                    aria-label={item.label}
                   >
-                    {item.label}
+                    {item.icon}
                   </a>
                 ))}
               </div>
@@ -150,8 +172,8 @@ const Contact = () => {
               {statusMessage.text && (
                 <div
                   className={`mb-4 p-3.5 sm:p-4 rounded-xl text-xs flex items-center gap-2.5 animate-fadeIn ${statusMessage.type === 'success'
-                      ? 'bg-emerald-950/70 border border-emerald-500/40 text-emerald-300'
-                      : 'bg-red-950/70 border border-red-500/40 text-red-300'
+                    ? 'bg-emerald-950/70 border border-emerald-500/40 text-emerald-300'
+                    : 'bg-red-950/70 border border-red-500/40 text-red-300'
                     }`}
                 >
                   <span className="material-symbols-outlined text-[18px]">
