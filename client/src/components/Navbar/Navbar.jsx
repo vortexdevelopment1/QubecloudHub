@@ -5,13 +5,12 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: 'Home', href: '#home', active: true },
+    { label: 'Home', href: '#home' },
     { label: 'About Us', href: '#about' },
     { label: 'Services', href: '#services' },
     { label: 'Portfolio', href: '#portfolio' },
     { label: 'Process', href: '#metrics' },
     { label: 'Testimonials', href: '#testimonials' },
-    { label: 'Contact Us', href: '#contact' },
   ];
 
   return (
@@ -32,11 +31,7 @@ const Navbar = () => {
             <a
               key={idx}
               href={link.href}
-              className={
-                link.active
-                  ? 'text-white hover:text-purple-300 transition-colors relative after:absolute after:bottom-[-6px] after:left-1/2 after:-translate-x-1/2 after:w-1.5 after:h-1.5 after:bg-purple-500 after:rounded-full'
-                  : 'hover:text-purple-300 transition-colors'
-              }
+              className="text-gray-300 hover:text-purple-300 transition-colors"
             >
               {link.label}
             </a>
@@ -49,7 +44,7 @@ const Navbar = () => {
             className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 sm:px-5 sm:py-2.5 rounded-full bg-gradient-to-r from-purple-600 via-fuchsia-600 to-indigo-600 text-white text-[11px] sm:text-xs font-bold tracking-wide shadow-[0_0_20px_rgba(168,85,247,0.5)] hover:shadow-[0_0_30px_rgba(168,85,247,0.8)] hover:scale-[1.02] active:scale-[0.98] transition-all whitespace-nowrap"
             href="#contact"
           >
-            <span>Let's Work Together</span>
+            <span>Contact Us</span>
             <span className="material-symbols-outlined text-[14px] sm:text-[16px]">arrow_forward</span>
           </a>
 
