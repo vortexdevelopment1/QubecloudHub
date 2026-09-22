@@ -568,31 +568,31 @@ const Portfolio = () => {
 
   return (
     <section
-      className="py-8 sm:py-10 md:py-12 relative overflow-hidden"
+      className="py-6 sm:py-10 md:py-12 relative overflow-hidden"
       id="portfolio"
     >
       <div
         ref={sectionRef}
-        className={`reveal-section ${isVisible ? 'is-revealed' : ''} max-w-[1480px] mx-auto px-5 sm:px-8 md:px-10 lg:px-12 w-full`}
+        className={`reveal-section ${isVisible ? 'is-revealed' : ''} max-w-[1480px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 w-full`}
       >
         {/* Section Header */}
-        <div className="flex items-center justify-between gap-4 mb-6 sm:mb-8">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-5 sm:mb-8">
           <div className="flex flex-col gap-1">
-            <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-purple-400">
+            <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-purple-400">
               <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span>
               <span>PORTFOLIO / REELS</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            <h2 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight">
               A Glimpse of Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-fuchsia-400">Recent Work</span>
             </h2>
-            <p className="text-xs sm:text-sm text-gray-400 mt-1">
+            <p className="text-xs sm:text-sm text-gray-400 mt-0.5 sm:mt-1">
               A selection of our recent video and content projects (Instagram Reels / Verticals):
             </p>
           </div>
 
           {/* Header Controls: Prev/Next Buttons & CTA (shown when projects exist) */}
           {projectsList.length > 0 && (
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 self-start sm:self-auto">
               <div className="flex items-center gap-1 bg-[#110e1c] p-1 rounded-full border border-purple-500/25 shadow-inner">
                 <button
                   type="button"
@@ -613,11 +613,11 @@ const Portfolio = () => {
               </div>
 
               <a
-                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-purple-500/30 text-xs font-semibold text-gray-300 hover:text-white hover:border-purple-400 transition-colors"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-purple-500/30 text-xs font-semibold text-gray-300 hover:text-white hover:border-purple-400 transition-colors"
                 href="#contact"
               >
                 <span>View All</span>
-                <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
+                <span className="material-symbols-outlined text-[13px] sm:text-[14px]">arrow_forward</span>
               </a>
             </div>
           )}

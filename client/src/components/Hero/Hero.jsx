@@ -55,39 +55,39 @@ const Hero = () => {
   const clientLogos = ["APEX", "VELOCE", "HYPERION", "SOLARIX", "QUANTICO", "SYNTHETIX"];
 
   return (
-    <section className="relative pt-8 sm:pt-10 md:pt-12 pb-12 sm:pb-14 md:pb-16 overflow-hidden">
-      <div className="max-w-[1480px] mx-auto px-5 sm:px-8 md:px-10 lg:px-12 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center min-h-[70vh]">
+    <section className="relative pt-4 sm:pt-10 md:pt-12 pb-10 sm:pb-14 md:pb-16 overflow-hidden">
+      <div className="max-w-[1480px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center min-h-[65vh] sm:min-h-[70vh]">
           {/* Left Column: Typography & CTAs with Staggered Entrance */}
-          <div className="lg:col-span-6 flex flex-col items-start gap-5 sm:gap-6">
+          <div className="lg:col-span-6 flex flex-col items-start gap-4 sm:gap-6">
             {/* Eyebrow Pill */}
-            <div className="animate-hero-eyebrow inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-950/40 border border-purple-500/30">
-              <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-purple-300">
+            <div className="animate-hero-eyebrow inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-1.5 rounded-full bg-purple-950/40 border border-purple-500/30">
+              <span className="text-[9px] sm:text-[10px] font-bold tracking-wider sm:tracking-[0.2em] uppercase text-purple-300">
                 Creative Digital Marketing Agency • Indore
               </span>
             </div>
 
             {/* Distinctive Punchy Headline */}
-            <h1 className="animate-hero-heading text-4xl sm:text-5xl lg:text-[56px] font-extrabold text-white tracking-tight leading-[1.12]">
+            <h1 className="animate-hero-heading text-[27px] xs:text-3xl sm:text-5xl lg:text-[56px] font-extrabold text-white tracking-tight leading-[1.22] sm:leading-[1.12]">
               WE BUILD <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-400 to-indigo-300">DIGITAL EXPERIENCES</span> THAT HELP BRANDS GROW.
             </h1>
 
             {/* Narrative Subtitle */}
-            <p className="animate-hero-paragraph text-sm sm:text-base text-gray-300/90 max-w-xl font-normal leading-relaxed">
+            <p className="animate-hero-paragraph text-xs sm:text-base text-gray-300/90 max-w-xl font-normal leading-relaxed">
               QubecloudHub is a creative digital marketing agency based in Indore, helping businesses grow with strategy, creativity, and powerful content.
             </p>
 
             {/* Action Buttons with Subtle Hover & Scale */}
-            <div className="animate-hero-cta flex flex-wrap items-center gap-4 pt-1">
+            <div className="animate-hero-cta flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1 w-full sm:w-auto">
               <a
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-gradient-to-r from-purple-600 via-fuchsia-600 to-indigo-600 text-white font-bold text-xs tracking-wide shadow-[0_0_30px_rgba(168,85,247,0.55)] hover:shadow-[0_0_40px_rgba(168,85,247,0.8)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 sm:px-7 sm:py-3.5 rounded-full bg-gradient-to-r from-purple-600 via-fuchsia-600 to-indigo-600 text-white font-bold text-xs tracking-wide shadow-[0_0_30px_rgba(168,85,247,0.55)] hover:shadow-[0_0_40px_rgba(168,85,247,0.8)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 text-center"
                 href="#portfolio"
               >
                 <span>Explore Selected Works / Reel</span>
                 <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
               </a>
               <a
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[#151224] border border-purple-500/30 text-white font-semibold text-xs hover:border-purple-400 hover:bg-purple-950/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-5 py-3 sm:px-6 sm:py-3.5 rounded-full bg-[#151224] border border-purple-500/30 text-white font-semibold text-xs hover:border-purple-400 hover:bg-purple-950/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 text-center"
                 href="#contact"
               >
                 <span>Book Agency Discovery</span>
@@ -96,35 +96,35 @@ const Hero = () => {
             </div>
 
             {/* Trust Badge Cluster */}
-            <div className="animate-hero-trust pt-3 sm:pt-4 flex items-center gap-4">
+            <div className="animate-hero-trust pt-2 sm:pt-4 flex items-center gap-3 sm:gap-4">
               {/* Avatar Cluster */}
-              <div className="flex -space-x-2.5 overflow-hidden">
+              <div className="flex -space-x-2 sm:-space-x-2.5 overflow-hidden flex-shrink-0">
                 {clientAvatars.map((avatar, idx) => (
                   <img
                     key={idx}
                     alt={avatar.alt}
-                    className="inline-block h-8 w-8 rounded-full ring-2 ring-[#08060c] object-cover transition-transform duration-300 hover:scale-110"
+                    className="inline-block h-7 w-7 sm:h-8 sm:w-8 rounded-full ring-2 ring-[#08060c] object-cover transition-transform duration-300 hover:scale-110"
                     src={avatar.src}
                   />
                 ))}
               </div>
               <div className="flex flex-col">
                 <div className="flex items-center gap-1.5">
-                  <span className="text-xs font-bold text-white">Founded by Varun Soni</span>
-                  <span className="material-symbols-outlined text-purple-400 text-[16px] material-symbols-fill">verified</span>
+                  <span className="text-[11px] sm:text-xs font-bold text-white">Founded by Varun Soni</span>
+                  <span className="material-symbols-outlined text-purple-400 text-[14px] sm:text-[16px] material-symbols-fill">verified</span>
                 </div>
-                <span className="text-[11px] text-gray-400">Founder, QubecloudHub | 2+ Years of Experience in Digital Marketing</span>
+                <span className="text-[10px] sm:text-[11px] text-gray-400 leading-tight">Founder, QubecloudHub | 2+ Years of Experience in Digital Marketing</span>
               </div>
             </div>
           </div>
 
           {/* Right Column: Glowing 3D Pedestal with Surrounding Badges — EXACT ORIGINAL */}
-          <div className="lg:col-span-6 relative flex items-center justify-center">
+          <div className="lg:col-span-6 relative flex items-center justify-center py-4 lg:py-0">
             {/* Center Radial Purple Aura */}
-            <div className="absolute w-[420px] h-[420px] bg-purple-600/30 rounded-full blur-[100px] pointer-events-none"></div>
-            <div className="relative w-full max-w-[480px] aspect-square flex items-center justify-center">
+            <div className="absolute w-[300px] h-[300px] sm:w-[420px] sm:h-[420px] bg-purple-600/30 rounded-full blur-[80px] sm:blur-[100px] pointer-events-none"></div>
+            <div className="relative w-full max-w-[340px] sm:max-w-[480px] aspect-square flex items-center justify-center scale-90 sm:scale-100">
               {/* 3D Centerpiece Visual */}
-              <div className="relative z-10 w-[340px] h-[340px] rounded-full overflow-hidden flex items-center justify-center">
+              <div className="relative z-10 w-[260px] h-[260px] sm:w-[340px] sm:h-[340px] rounded-full overflow-hidden flex items-center justify-center">
                 <img
                   alt="QubecloudHub 3D Holographic Core"
                   className="w-full h-full object-contain filter drop-shadow-[0_0_35px_rgba(168,85,247,0.7)]"
@@ -139,14 +139,14 @@ const Hero = () => {
               {orbitalBadges.map((badge) => (
                 <div
                   key={badge.id}
-                  className={`absolute ${badge.positionClass} z-20 flex items-center gap-2.5 px-3.5 py-2 rounded-2xl bg-[#110e1c]/90 border border-purple-500/30 backdrop-blur-xl shadow-[0_10px_25px_rgba(0,0,0,0.6)]`}
+                  className={`absolute ${badge.positionClass} z-20 flex items-center gap-2 sm:gap-2.5 px-2.5 py-1.5 sm:px-3.5 sm:py-2 rounded-2xl bg-[#110e1c]/90 border border-purple-500/30 backdrop-blur-xl shadow-[0_10px_25px_rgba(0,0,0,0.6)]`}
                 >
-                  <div className="w-8 h-8 rounded-xl bg-purple-900/50 border border-purple-400/40 flex items-center justify-center text-purple-300">
-                    <span className="material-symbols-outlined text-[18px]">{badge.icon}</span>
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-purple-900/50 border border-purple-400/40 flex items-center justify-center text-purple-300">
+                    <span className="material-symbols-outlined text-[16px] sm:text-[18px]">{badge.icon}</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-xs font-bold text-white">{badge.title}</span>
-                    <span className="text-[10px] text-gray-400">{badge.subtitle}</span>
+                    <span className="text-[11px] sm:text-xs font-bold text-white">{badge.title}</span>
+                    <span className="text-[9px] sm:text-[10px] text-gray-400">{badge.subtitle}</span>
                   </div>
                 </div>
               ))}
@@ -155,15 +155,15 @@ const Hero = () => {
         </div>
 
         {/* CLIENT LOGOS TICKER / TRUST BAR */}
-        <div className="animate-hero-trust mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-purple-500/15">
-          <p className="text-center text-[10px] font-bold tracking-[0.25em] text-gray-400 uppercase mb-5">
+        <div className="animate-hero-trust mt-8 sm:mt-12 pt-5 sm:pt-8 border-t border-purple-500/15">
+          <p className="text-center text-[9px] sm:text-[10px] font-bold tracking-[0.2em] sm:tracking-[0.25em] text-gray-400 uppercase mb-4 sm:mb-5">
             TRUSTED BY BUSINESSES ACROSS INDUSTRIES
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-14 md:gap-20 opacity-70">
+          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-14 md:gap-20 opacity-70">
             {clientLogos.map((logo, index) => (
               <span
                 key={index}
-                className="text-lg md:text-xl font-black tracking-widest text-gray-300 hover:text-purple-400 transition-colors cursor-default"
+                className="text-sm sm:text-lg md:text-xl font-black tracking-widest text-gray-300 hover:text-purple-400 transition-colors cursor-default"
               >
                 {logo}
               </span>

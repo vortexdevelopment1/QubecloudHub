@@ -16,13 +16,13 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-[#08060c]/85 backdrop-blur-xl border-b border-purple-500/15">
-      <div className="max-w-[1480px] mx-auto px-5 sm:px-8 md:px-10 lg:px-12 h-20 flex items-center justify-between gap-4 w-full">
+      <div className="max-w-[1480px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 h-16 sm:h-20 flex items-center justify-between gap-3 sm:gap-4 w-full">
         {/* Brand Logo */}
-        <a className="flex items-center group" href="#home">
+        <a className="flex items-center group flex-shrink-0" href="#home">
           <img
             src={logoImg}
             alt="QubecloudHub Logo"
-            className="h-12 sm:h-14 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            className="h-9 sm:h-14 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
         </a>
 
@@ -44,19 +44,19 @@ const Navbar = () => {
         </nav>
 
         {/* Right Header CTA Button & Mobile Toggle */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
           <a
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-purple-600 via-fuchsia-600 to-indigo-600 text-white text-xs font-bold tracking-wide shadow-[0_0_20px_rgba(168,85,247,0.5)] hover:shadow-[0_0_30px_rgba(168,85,247,0.8)] hover:scale-[1.02] active:scale-[0.98] transition-all"
+            className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 sm:px-5 sm:py-2.5 rounded-full bg-gradient-to-r from-purple-600 via-fuchsia-600 to-indigo-600 text-white text-[11px] sm:text-xs font-bold tracking-wide shadow-[0_0_20px_rgba(168,85,247,0.5)] hover:shadow-[0_0_30px_rgba(168,85,247,0.8)] hover:scale-[1.02] active:scale-[0.98] transition-all whitespace-nowrap"
             href="#contact"
           >
             <span>Let's Work Together</span>
-            <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+            <span className="material-symbols-outlined text-[14px] sm:text-[16px]">arrow_forward</span>
           </a>
 
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="md:hidden p-2 text-gray-400 hover:text-white focus:outline-none"
+            className="md:hidden p-1.5 text-gray-400 hover:text-white focus:outline-none flex items-center justify-center"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle Navigation Menu"
           >
